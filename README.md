@@ -4,4 +4,4 @@ plink needs to be installed and in shell path, A .tped file needs to be given to
 you can generate a .tped file by
 plink --bfile XXX --recode transpose XXX 
 An example command to the script is then
-$ python remove_duplicate_snps_tped_V1.py your_tpedfile.tped 
+## python remove_duplicate_snps_tped_V1.py your_tpedfile.tped 
