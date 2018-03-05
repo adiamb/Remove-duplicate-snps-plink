@@ -34,7 +34,7 @@ def remove_dups(in_file):
 		print "FOUND DUPLICATES ", str(duplicate_counter), "VALID SNPS FOUND ", str(valid_snps)
 
 def plink_bed_conv(duprmtepd, in_file):
-	make_command = 'plink --tfile '+duprmtepd.replace('.tped', '')+' --make-bed --out '+duprmtepd.replace('.tped', '')
+	make_command = 'plink --tfile '+duprmtepd.replace('.tped', '')+' --allow-extra-chr --make-bed --out '+duprmtepd.replace('.tped', '')
 	copy_fam = subprocess.Popen('cp '+in_file.replace('.tped', '.tfam')+' '+ duprmtepd.replace('.tped', '.tfam'), shell=True, stdout=PIPE, stderr=PIPE)
 	stdout, stderr = copy_fam.communicate()
 	if stderr:
